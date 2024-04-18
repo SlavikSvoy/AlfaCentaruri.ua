@@ -18,7 +18,11 @@ body {
     
 }
 
+
+
 #menuContainer {
+    margin: 10px 0 0;
+
     position: absolute;
     top: 5px;
     left: center;
@@ -32,11 +36,11 @@ body {
     padding: 0;
     margin: 0;
     display: flex; 
-  }
+}
 #menuContainer ul li {
     margin-bottom: 10px;
     display: inline-block;
-  }
+}
 #menuContainer ul li a {
     transition: background-color 0.01s ease-in-out, color 0.1s ease-in-out;
   
@@ -49,18 +53,19 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 16px;
-  }
+}
 #menuContainer ul li a:hover {
     background-color: #00ABE4;
     color: #fff;
-  }
+}
 #menuContainer ul li a img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-  }
+}
 
 main.table{
+    margin: 50px 0 0;
     width: 82vw;
     height: 90vh;
     background-color: #93cee1;
@@ -69,7 +74,7 @@ main.table{
     border-radius: .8rem;
 
     overflow: hidden;
-    }
+}
 
 .table_header{
     width: 100%;
@@ -102,7 +107,21 @@ td img{
     border-radius: 50%;
 
     vertical-align: middle;
+    transition: transform 0.3s ease;
 }
+
+a{
+    transition: transform 0.3s ease;
+  }
+  a:hover{
+    transform: scale(1.3);
+  }
+
+td img:hover{
+    transform: scale(1.3);
+  }
+
+
 
 table, th, td{
     border-collapse: collapse;

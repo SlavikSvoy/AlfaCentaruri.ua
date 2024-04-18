@@ -2,6 +2,13 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 
 
+a{
+  transition: transform 0.3s ease;
+}
+a:hover{
+  transform: scale(1.5);
+}
+
 body {
 
   /* flex-direction: row; */
@@ -83,15 +90,29 @@ body {
   background-color: #ffffff;
   border-radius: 50px;
   border-top: 5px solid #d2652d;
+
+  transition: transform 0.3s ease;
 }
 
-/* .snip1533 *,
-.snip1533 *:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-} */
+
+.snip1533:hover{
+  transform: scale(1.3);
+  color: #FFFFFF;
+  background-color: #333333;
+  h3{
+    color: #ffb64a;
+  }
+  .happy{
+    color: #00ff08;
+    font-weight: 1000;
+  }
+  .negative{
+    font-weight: 1000;
+  
+  }
+}
+
+
 
 .snip1533 figcaption {
   padding: 13% 10% 15%;
