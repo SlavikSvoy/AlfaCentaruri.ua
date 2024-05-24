@@ -138,16 +138,7 @@
     }
   }
   
-  main.table {
-    margin: 10px auto;
-    width: 90vw;
-    height: 90vh;
-    background-color: #93cee1;
-    border-radius: .8rem;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-  }
+
   
   .table_header {
     width: 100%;

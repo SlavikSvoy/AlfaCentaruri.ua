@@ -140,16 +140,17 @@ a:hover {
 }
 
 /* Секція з відео */
+
 .listVideo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
-}
+} */
 
 .listVideo iframe {
   max-width: 100%;
   height: auto;
-  flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+  flex: 1 1 300px;
 }

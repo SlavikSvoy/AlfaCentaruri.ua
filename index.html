@@ -30,29 +30,131 @@
       <li><a href="registration.html" target="_blank"> Login </a></li>
     </ul>
   </nav>
+
   <!-- VIDEO -->
   <section class="listVideo">
-    <iframe width="366" height="210" src="https://www.youtube.com/embed/BqaGupuj9Vs?si=mIVKhKj7F1i7m5Em"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="366" height="210" src="https://www.youtube.com/embed/bmwpTt-5lrU?si=_hBIMW2J4ggcC2BR"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="366" height="210" src="https://www.youtube.com/embed/ayot-k3N0oQ?si=MBoCnvNLutbf-Cxr"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="366" height="210" src="https://www.youtube.com/embed/_dNMg7Y1Y04?si=tRUoOvhZoQQQZs-W"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="366" height="210" src="https://www.youtube.com/embed/Sh5P7sQwd3I?si=Cgw9rfYXzGFgvk0l"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div id="player1"></div>
+    <div id="player2"></div>
+    <div id="player3"></div>
+    <div id="player4"></div>
+    <div id="player5"></div>
+    <div id="player6"></div>
+    <div id="player7"></div>
+    <div id="player8"></div>
+    <div id="player9"></div>
+    <div id="player10"></div>
   </section>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    // Створення глобальних змінних для плеєрів
+    var player1, player2, player3, player4, player5, player6, player7, player8, player9, player10;
+
+    function onYouTubeIframeAPIReady() {
+      player1 = new YT.Player('player1', {
+        height: '195',
+        width: '320',
+        videoId: 'QZQptiZOQfs?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      player2 = new YT.Player('player2', {
+        height: '195',
+        width: '320',
+        videoId: 'dfBz7lkoAR4?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      player3 = new YT.Player('player3', {
+        height: '195',
+        width: '320',
+        videoId: 'IaQmrb21hdk?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      player4 = new YT.Player('player4', {
+        height: '195',
+        width: '320',
+        videoId: 'td4bjVM6WmY?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      player5 = new YT.Player('player5', {
+        height: '195',
+        width: '320',
+        videoId: '5KRVYPIBB-Q?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      player6 = new YT.Player('player6', {
+        height: '195',
+        width: '320',
+        videoId: 'EJxwWpaGoJs?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      player7 = new YT.Player('player7', {
+        height: '195',
+        width: '320',
+        videoId: 'x1IxT9cR90c?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      player8 = new YT.Player('player8', {
+        height: '195',
+        width: '320',
+        videoId: 'emShyzxqL7I?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      player9 = new YT.Player('player9', {
+        height: '195',
+        width: '320',
+        videoId: 'kM2SE0Q0hVI?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      player10 = new YT.Player('player10', {
+        height: '195',
+        width: '320',
+        videoId: 'f-nAi2YVYo8?si',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+      // Код для обробки подій зміни стану плеєра
+    }
+
+    function stopVideo(player) {
+      player.stopVideo();
+    }
+  </script>
 </body>
 
 </html>

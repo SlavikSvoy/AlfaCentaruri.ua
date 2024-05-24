@@ -32,10 +32,11 @@
       <li><a href="registration.html" target="_blank"> Login </a></li>
     </ul>
   </nav>
+  <section class="table_header">
+    <h1>TOP 5 SCIENCE CHANNELS</h1>
+  </section>
   <main class="table" id="channel_table">
-    <section class="table_header">
-      <h1>TOP BEST SCIENCE CHANNELS</h1>
-    </section>
+
     <section class="table_body">
       <table>
         <thead>
@@ -54,18 +55,9 @@
               <strong><a href="https://www.youtube.com/channel/UCMIVE71tHEUDkuw8tPxtzSQ" target="_blank">Цікава
                   наука</a></strong>
             </td>
-            <td>264 000</td>
-            <td>17 248 364</td>
-            <td>285</td>
-          </tr>
-          <tr>
-            <td><img src="channel/Astroromantik.jpg" alt="" /></td>
-            <td>
-              <strong><a href="https://www.youtube.com/@Astroromantik" target="_blank">Astroromantik</a></strong>
-            </td>
-            <td>181 000</td>
-            <td>39 525 408</td>
-            <td>342</td>
+            <td id="subscribers1"></td>
+            <td id="views1"></td>
+            <td id="videos1"></td>
           </tr>
           <tr>
             <td><img src="channel/Alpha Centauri.jpg" alt="" /></td>
@@ -73,9 +65,9 @@
               <strong><a href="https://www.youtube.com/channel/UCbhABwj6Ijp1dYG3Wo5Ek3Q" target="_blank">Alpha
                   Centauri</a></strong>
             </td>
-            <td>99 200</td>
-            <td>9 276 368</td>
-            <td>336</td>
+            <td id="subscribers2"></td>
+            <td id="views2"></td>
+            <td id="videos2"></td>
           </tr>
           <tr>
             <td><img src="channel/Svidok EVOLYUTSIYI.jpg" alt="" /></td>
@@ -83,9 +75,9 @@
               <strong><a href="https://www.youtube.com/channel/UCF9KqqyMHuOpbU6w_cVHGLw" target="_blank">Свідок
                   ЕВОЛЮЦІЇ</a></strong>
             </td>
-            <td>36 000</td>
-            <td>1 502 677</td>
-            <td>62</td>
+            <td id="subscribers3"></td>
+            <td id="views3"></td>
+            <td id="videos3"></td>
           </tr>
           <tr>
             <td><img src="channel/nauka_ua.jpg" alt="" /></td>
@@ -93,9 +85,9 @@
               <strong><a href="https://www.youtube.com/channel/UCeh1dAupre7xBeHoOCqhKbw"
                   target="_blank">nauka․ua</a></strong>
             </td>
-            <td>31 700</td>
-            <td>13 220 295</td>
-            <td>82</td>
+            <td id="subscribers4"></td>
+            <td id="views4"></td>
+            <td id="videos4"></td>
           </tr>
           <tr>
             <td><img src="channel/Vsesvit UA.jpg" alt="" /></td>
@@ -103,52 +95,39 @@
               <strong><a href="https://www.youtube.com/channel/UCi0Z9L9HrhD7oYpMs2pLxSw" target="_blank">Всесвіт
                   UA</a></strong>
             </td>
-            <td>141 000</td>
-            <td>14 475 670</td>
-            <td>144</td>
-          </tr>
-          <tr>
-            <td><img src="channel/Bio.jpg" alt="" /></td>
-            <td>
-              <strong><a href="https://www.youtube.com/@bio_UA/videos" target="_blank">Біо</a></strong>
-            </td>
-            <td>6 690</td>
-            <td>144 384</td>
-            <td>88</td>
-          </tr>
-          <tr>
-            <td><img src="channel/Shchodo Vsesvitu.jpg" alt="" /></td>
-            <td>
-              <strong><a href="https://www.youtube.com/channel/UCWua4EFz7pGphfq-m1s0vjg" target="_blank">Щодо
-                  Всесвіту</a></strong>
-            </td>
-            <td>34 500</td>
-            <td>2 533 063</td>
-            <td>122</td>
-          </tr>
-          <tr>
-            <td><img src="channel/Klyatyy ratsionalist.jpg" alt="" /></td>
-            <td>
-              <strong><a href="https://www.youtube.com/channel/UCioz7pLeEpBNrFfwHb2m-pA" target="_blank">Клятий
-                  раціоналіст</a></strong>
-            </td>
-            <td>330 000</td>
-            <td>21 378 967</td>
-            <td>213</td>
-          </tr>
-          <tr>
-            <td><img src="channel/Sfeyerychnyy kosmos.jpg" alt="" /></td>
-            <td>
-              <strong><a href="https://www.youtube.com/@SolarBallsUA" target="_blank">Сфеєричний космос</a></strong>
-            </td>
-            <td>13 700</td>
-            <td>500 965</td>
-            <td>24</td>
-          </tr>
+            <td id="subscribers5"></td>
+            <td id="views5"></td>
+            <td id="videos5"></td>
         </tbody>
       </table>
     </section>
   </main>
+  <script>
+    var apiKey = 'AIzaSyB7ctJyxez2eto-qe8lfkw4bZTJaUAEJWo';
+    var channelIds = ['UCMIVE71tHEUDkuw8tPxtzSQ', 'UCbhABwj6Ijp1dYG3Wo5Ek3Q', 'UCF9KqqyMHuOpbU6w_cVHGLw', 'UCeh1dAupre7xBeHoOCqhKbw', 'UCi0Z9L9HrhD7oYpMs2pLxSw'];
+
+    function updateChannelStatistics() {
+      // Проходьте циклом по кожному ID каналу
+      channelIds.forEach((channelId, index) => {
+        var url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`;
+
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            var statistics = data.items[0].statistics;
+            // Оновіть відповідні елементи HTML за допомогою унікальних ID
+            document.getElementById('subscribers' + (index + 1)).textContent = statistics.subscriberCount;
+            document.getElementById('views' + (index + 1)).textContent = statistics.viewCount;
+            document.getElementById('videos' + (index + 1)).textContent = statistics.videoCount;
+          })
+          .catch(error => console.error('Error:', error));
+      });
+    }
+
+    updateChannelStatistics();
+    // Оновлення статистики кожні 30 секунд
+    setInterval(updateChannelStatistics, 30000);
+  </script>
 </body>
 
 </html>
