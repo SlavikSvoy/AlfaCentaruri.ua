@@ -6,35 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="shortcut icon" href="svg/login.svg" type="image/x-icon" />
-
     <link rel="stylesheet" href="css/login.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   </head>
 
   <body>
     <div class="wrapper">
-      <form action="">
+      <form id="loginForm">
         <h1>Login</h1>
         <div class="input-box">
-          <input type="text" id="login" placeholder="Username" required />
+          <input type="text" id="username" placeholder="Username" required />
           <i class="bx bx-user"></i>
         </div>
         <div class="input-box">
-          <input
-            type="Password"
-            id="Password"
-            placeholder="Password"
-            required
-          />
+          <input type="password" id="password" placeholder="Password" required />
           <i class="bx bx-lock-alt"></i>
         </div>
-
         <button type="submit" id="submit" class="btn">Login</button>
       </form>
     </div>
-    <script src="js/sing.js"></script>
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        try {
+          const response = await fetch('http://localhost:3000/register', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+          });
+
+          if (response.ok) {
+            const result = await response.json();
+            alert(result.message);
+          } else {
+            const error = await response.json();
+            alert('Error: ' + error.error);
+          }
+        } catch (err) {
+          console.error('Error:', err);
+          alert('An error occurred while registering. Please try again.');
+        }
+      });
+    </script>
   </body>
 </html>

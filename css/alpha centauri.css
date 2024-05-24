@@ -9,13 +9,13 @@
 
 body {
   background: #dae9f9;
-
   flex-direction: row;
   height: 100vh;
   margin: 0;
   font-family: "Arsenal", sans-serif;
 }
 
+/* навігація */
 nav {
   background: #0082e6;
   height: 80px;
@@ -139,21 +139,17 @@ a:hover {
   }
 }
 
-a {
-  transition: transform 0.3s ease;
-}
-
-a:hover {
-  transform: scale(1.3);
-}
-
+/* Секція з відео */
 .listVideo {
-  justify-content: space-between;
-  margin-left: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .listVideo iframe {
-  border: 1px solid;
-  border-radius: 4vh;
-  margin: 3px 3px;
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
 }
