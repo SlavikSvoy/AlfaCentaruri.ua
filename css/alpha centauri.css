@@ -49,6 +49,18 @@ nav ul li a {
   text-transform: uppercase;
 }
 
+.video-thumbnail {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+}
+
+.video-thumbnail img {
+  width: 320px;
+  height: 195px;
+}
+
 a.active,
 a:hover {
   background: #1b9bff;
