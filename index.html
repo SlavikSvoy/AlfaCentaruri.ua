@@ -1,160 +1,136 @@
 <!DOCTYPE html>
 <html lang="ua">
+  <head>
+    <title>Альфа Центавра</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="fav/favicon_cite.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/alpha centauri.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <title>Альфа Центавра</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="shortcut icon" href="fav/favicon_cite.png" type="image/x-icon" />
-  <link rel="stylesheet" href="css/alpha centauri.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-</head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo"> Alfa Centauri</label>
 
-<body>
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <label class="logo"> Alfa Centauri</label>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="channel.html">Channel</a></li>
+        <li><a href="my_channel.html">Author</a></li>
+        <li><a href="com.html">Reviews</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="about us.html">About us</a></li>
+        <li><a href="registration.html" target="_blank"> sign in </a></li>
+        <li><a href="login.html" target="_blank"> Login </a></li>
+      </ul>
+    </nav>
 
-    <ul>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="channel.html">Channel</a></li>
-      <li><a href="my_channel.html">Author</a></li>
-      <li><a href="com.html">Reviews</a> </li>
-      <li><a href="donate.html">Donate</a></li>
-      <li><a href="about us.html">About us</a></li>
-      <li><a href="registration.html" target="_blank"> Login </a></li>
-    </ul>
-  </nav>
+    <!-- VIDEO -->
+    <section class="listVideo">
+      <div class="video-thumbnail" data-video-id="QZQptiZOQfs">
+        <img
+          src="https://img.youtube.com/vi/QZQptiZOQfs/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+      <div class="video-thumbnail" data-video-id="dfBz7lkoAR4">
+        <img
+          src="https://img.youtube.com/vi/dfBz7lkoAR4/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+      <div class="video-thumbnail" data-video-id="IaQmrb21hdk">
+        <img
+          src="https://img.youtube.com/vi/IaQmrb21hdk/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+      <div class="video-thumbnail" data-video-id="td4bjVM6WmY">
+        <img
+          src="https://img.youtube.com/vi/td4bjVM6WmY/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+      <div class="video-thumbnail" data-video-id="5KRVYPIBB-Q">
+        <img
+          src="https://img.youtube.com/vi/5KRVYPIBB-Q/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+      <div class="video-thumbnail" data-video-id="EJxwWpaGoJs">
+        <img
+          src="https://img.youtube.com/vi/EJxwWpaGoJs/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+      <div class="video-thumbnail" data-video-id="x1IxT9cR90c">
+        <img
+          src="https://img.youtube.com/vi/x1IxT9cR90c/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+      <div class="video-thumbnail" data-video-id="emShyzxqL7I">
+        <img
+          src="https://img.youtube.com/vi/emShyzxqL7I/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+      <div class="video-thumbnail" data-video-id="kM2SE0Q0hVI">
+        <img
+          src="https://img.youtube.com/vi/kM2SE0Q0hVI/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+      <div class="video-thumbnail" data-video-id="f-nAi2YVYo8">
+        <img
+          src="https://img.youtube.com/vi/f-nAi2YVYo8/0.jpg"
+          alt="Thumbnail"
+        />
+      </div>
+    </section>
 
-  <!-- VIDEO -->
-  <section class="listVideo">
-    <div id="player1"></div>
-    <div id="player2"></div>
-    <div id="player3"></div>
-    <div id="player4"></div>
-    <div id="player5"></div>
-    <div id="player6"></div>
-    <div id="player7"></div>
-    <div id="player8"></div>
-    <div id="player9"></div>
-    <div id="player10"></div>
-  </section>
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let thumbnails = document.querySelectorAll(".video-thumbnail");
 
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script>
-    // Створення глобальних змінних для плеєрів
-    var player1, player2, player3, player4, player5, player6, player7, player8, player9, player10;
+        thumbnails.forEach((thumbnail) => {
+          thumbnail.addEventListener("click", function () {
+            let videoId = this.getAttribute("data-video-id");
+            let playerDiv = document.createElement("div");
+            playerDiv.id = "player-" + videoId;
+            this.innerHTML = "";
+            this.appendChild(playerDiv);
+            new YT.Player(playerDiv.id, {
+              height: "195",
+              width: "320",
+              videoId: videoId,
+              events: {
+                onReady: onPlayerReady,
+                onStateChange: onPlayerStateChange,
+              },
+            });
+          });
+        });
+      });
 
-    function onYouTubeIframeAPIReady() {
-      player1 = new YT.Player('player1', {
-        height: '195',
-        width: '320',
-        videoId: 'QZQptiZOQfs?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player2 = new YT.Player('player2', {
-        height: '195',
-        width: '320',
-        videoId: 'dfBz7lkoAR4?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player3 = new YT.Player('player3', {
-        height: '195',
-        width: '320',
-        videoId: 'IaQmrb21hdk?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player4 = new YT.Player('player4', {
-        height: '195',
-        width: '320',
-        videoId: 'td4bjVM6WmY?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player5 = new YT.Player('player5', {
-        height: '195',
-        width: '320',
-        videoId: '5KRVYPIBB-Q?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player6 = new YT.Player('player6', {
-        height: '195',
-        width: '320',
-        videoId: 'EJxwWpaGoJs?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player7 = new YT.Player('player7', {
-        height: '195',
-        width: '320',
-        videoId: 'x1IxT9cR90c?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player8 = new YT.Player('player8', {
-        height: '195',
-        width: '320',
-        videoId: 'emShyzxqL7I?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player9 = new YT.Player('player9', {
-        height: '195',
-        width: '320',
-        videoId: 'kM2SE0Q0hVI?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player10 = new YT.Player('player10', {
-        height: '195',
-        width: '320',
-        videoId: 'f-nAi2YVYo8?si',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-    }
-
-    function onPlayerReady(event) {
-      event.target.playVideo();
-    }
-
-    function onPlayerStateChange(event) {
-      // Код для обробки подій зміни стану плеєра
-    }
-
-    function stopVideo(player) {
-      player.stopVideo();
-    }
-  </script>
-</body>
-
+      function onYouTubeIframeAPIReady() {}
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+      function onPlayerStateChange(event) {}
+    </script>
+  </body>
 </html>
