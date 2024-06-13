@@ -212,6 +212,8 @@ a:hover {
     left: -100%;
     text-align: center;
     transition: all .5s;
+    z-index: 1000; /* Зробити меню поверх всього */
+    overflow-y: auto; /* Додати прокручування для довгого меню */
   }
 
   nav ul li {
@@ -232,12 +234,17 @@ a:hover {
 
   #check:checked~ul {
     left: 0;
+    position: fixed; /* Зробити меню нерухомим */
   }
 
   .icons {
     left: 50%;
     margin-top: 50px;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 @media (max-width: 1718px) {
