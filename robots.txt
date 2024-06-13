@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /admin/
+
+Disallow: /login/
+
+Allow: / Sitemap: https://slaviksvoy.github.io/AlfaCentaruri.ua/sitemap.xml
