@@ -5,8 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Сайт про Альфа Центавра - відео, огляди та інформація про космос">
+    <meta name="keywords" content="Альфа Центавра, космос, відео, наука">
     <link rel="shortcut icon" href="fav/favicon_cite.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/alpha centauri.css" />
+    <link rel="stylesheet" href="css/alpha-centauri.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -15,6 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    
   </head>
 
   <body>
@@ -28,7 +31,7 @@
       <ul>
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="channel.html">Channel</a></li>
-        <li><a href="my_channel.html">Author</a></li>
+        <li><a href="my-channel.html">Author</a></li>
         <li><a href="com.html">Reviews</a></li>
         <li><a href="donate.html">Donate</a></li>
         <li><a href="about us.html">About us</a></li>
@@ -42,104 +45,71 @@
       <div class="video-thumbnail" data-video-id="QZQptiZOQfs">
         <img
           src="https://img.youtube.com/vi/QZQptiZOQfs/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
       <div class="video-thumbnail" data-video-id="dfBz7lkoAR4">
         <img
           src="https://img.youtube.com/vi/dfBz7lkoAR4/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
       <div class="video-thumbnail" data-video-id="IaQmrb21hdk">
         <img
           src="https://img.youtube.com/vi/IaQmrb21hdk/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
       <div class="video-thumbnail" data-video-id="td4bjVM6WmY">
         <img
           src="https://img.youtube.com/vi/td4bjVM6WmY/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
       <div class="video-thumbnail" data-video-id="5KRVYPIBB-Q">
         <img
           src="https://img.youtube.com/vi/5KRVYPIBB-Q/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
       <div class="video-thumbnail" data-video-id="EJxwWpaGoJs">
         <img
           src="https://img.youtube.com/vi/EJxwWpaGoJs/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
       <div class="video-thumbnail" data-video-id="x1IxT9cR90c">
         <img
           src="https://img.youtube.com/vi/x1IxT9cR90c/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
       <div class="video-thumbnail" data-video-id="emShyzxqL7I">
         <img
           src="https://img.youtube.com/vi/emShyzxqL7I/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
       <div class="video-thumbnail" data-video-id="kM2SE0Q0hVI">
         <img
           src="https://img.youtube.com/vi/kM2SE0Q0hVI/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
       <div class="video-thumbnail" data-video-id="f-nAi2YVYo8">
         <img
           src="https://img.youtube.com/vi/f-nAi2YVYo8/0.jpg"
-          alt="Thumbnail"
+          alt="Thumbnail" loading="lazy"
         />
       </div>
     </section>
 
     <script async src="https://www.youtube.com/iframe_api"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let thumbnails = document.querySelectorAll(".video-thumbnail");
-
-        thumbnails.forEach((thumbnail) => {
-          thumbnail.addEventListener("click", function () {
-            let videoId = this.getAttribute("data-video-id");
-            let playerDiv = document.createElement("div");
-            playerDiv.id = "player-" + videoId;
-            this.innerHTML = "";
-            this.appendChild(playerDiv);
-            new YT.Player(playerDiv.id, {
-              height: "195",
-              width: "320",
-              videoId: videoId,
-              events: {
-                onReady: onPlayerReady,
-                onStateChange: onPlayerStateChange,
-              },
-            });
-          });
-        });
-      });
-
-      function onYouTubeIframeAPIReady() {}
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
-      function onPlayerStateChange(event) {}
-
-      function toggleBodyScroll() {
-    if (document.getElementById('check').checked) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-  }
-  
+document.addEventListener("DOMContentLoaded",function(){let t=document.querySelectorAll(".video-thumbnail");t.forEach(t=>{t.addEventListener("click",function(){let t=this.getAttribute("data-video-id");let e=document.createElement("div");e.id="player-"+t;this.innerHTML="";this.appendChild(e);new YT.Player(e.id,{height:"195",width:"320",t:t,o:{i:onPlayerReady,l:onPlayerStateChange}})})})});function t(){const e=document.body;const n=document.getElementById('check');e.classList.toggle('no-scroll',n.checked);
+// Закриття меню при кліку на пункт
+document.querySelectorAll('nav ul li a').forEach(t=>{t.addEventListener('click',()=>{n.checked=false;e.classList.remove('no-scroll')})})}const i="AIzaSyCpWH_7q908n8s0FkZn-JXPBkq-NPp3sqE";// Краще зберігати у безпечному місці
+const e=document.querySelectorAll(".video-thumbnail");async function o(t,e){try{const o=await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${t}&key=${i}`);const c=await o.json();if(c.items&&c.items.length>0){e.textContent=c.items[0].snippet.title}else{e.textContent="Назва не знайдена"}}catch(n){console.error("Помилка отримання назви відео:",n);e.textContent="Помилка завантаження"}}e.forEach(t=>{let e=t.getAttribute("data-video-id");let n=document.createElement("p");n.classList.add("video-title");n.textContent="Завантаження...";t.appendChild(n);o(e,n)});
     </script>
   </body>
 </html>
