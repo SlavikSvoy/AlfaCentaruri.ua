@@ -8,7 +8,7 @@
   }
   
   body {
-    background: #dae9f9;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png"), #0b1e31;
     height: 100vh;
     margin: 0;
   }
@@ -219,7 +219,7 @@
   }
   
   tbody tr:hover {
-    background-color: #fff6;
+    background-color: rgba(128, 183, 255, 0.4);
   }
   
   a {
@@ -285,4 +285,6 @@
       transform: scale(1.05);
     }
   }
-  
+h1{
+  color: aliceblue;
+}

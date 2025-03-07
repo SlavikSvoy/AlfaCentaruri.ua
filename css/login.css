@@ -13,16 +13,16 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to right, #e2efff 0%, #bbdbff 100%);
+  background: url("https://www.transparenttextures.com/patterns/stardust.png"), #0b1e31;
 }
 
 .wrapper {
   width: 420px;
   background: transparent;
-  color: #000000;
+  color: hsl(0, 0%, 100%);
   border-radius: 10px;
   padding: 30px 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(123, 125, 255, 0.5);
 }
 
 .wrapper h1 {
@@ -43,15 +43,15 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
-  border: 2px solid rgba(33, 33, 33, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
   font-size: 16px;
-  color: #000000;
+  color: #ffffff;
   padding: 20px 45px 20px 20px;
 }
 
 .input-box input::placeholder {
-  color: #22393e;
+  color: #cecece;
 }
 
 .input-box i {

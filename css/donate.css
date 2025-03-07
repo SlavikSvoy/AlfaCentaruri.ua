@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #dae9f9;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png"), #0b1e31;
   flex-direction: row;
   height: 100vh;
   margin: 0;

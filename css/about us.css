@@ -10,7 +10,7 @@
 }
 
 body {
-  background: #dae9f9;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png"), #0b1e31;
   min-height: 100vh;
 }
 
@@ -266,7 +266,7 @@ a:hover {
   align-items: center;
   display: flex;
   margin: 75px;
-  color: #262c33;
+  color: #ffffff;
 
   font-family: "Arsenal", sans-serif;
   font-weight: 400;
@@ -274,6 +274,7 @@ a:hover {
 }
 
 .text h3 {
+  color: #ffffff;
   font-family: "Arsenal", sans-serif;
   font-weight: 100;
   font-style: normal;
